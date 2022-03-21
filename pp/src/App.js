@@ -2,6 +2,7 @@ import React, {useState, useRef} from "react";
 import People from './assets/people.png'
 import Arrow from './assets/arrow.png'
 import Trash from "./assets/trash.png"
+import axios from 'axios'
 
 import { Container, Image, ContainerItens, H1, InputLabel, Input, Button, User} from "./styles";
 
@@ -11,9 +12,15 @@ const App = () => {
 const [ users,setUsers] = useState([]);
 const inputName = useRef()
 const inputAge = useRef()
+async function  addNewUser () {
 
-const addNewUser = () => {
-  setUsers([... users,{id:Math.random(), name: inputName.current.value, age: inputAge.current.value}])
+  const data = await axios.post("http://localhost:3100/users", {
+    name: inputName.current.value,
+    age: inputAge.current.value,
+  })
+
+  console.log(data)
+  // setUsers([... users,{id:Math.random(), name: inputName.current.value, age: inputAge.current.value}])
 }
 
 const deleteUser = (userId) => {
