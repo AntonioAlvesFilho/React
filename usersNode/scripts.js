@@ -23,7 +23,6 @@ const chuckUserId = (request, response, next) => {
     request.userIndex = index
     
 
-    console.log('ta cheganmdo aq')
 
     next()
 }
