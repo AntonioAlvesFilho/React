@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './Container/Home'
 import Users from './Container/Users'
 
-const Routes = () => {
+function Routes() {
 
     return(
     <Router>
