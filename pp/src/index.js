@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './Container/Home/index';
-import Users from './Container/Users'
-import GlobalStyle from './globalStyles'
+import Routes from './routes'
+import GlobalStyle from './styles/globalStyles'
 
 
-ReactDOM.render(<><Users /> <GlobalStyle /></>, document.getElementById('root'));
+ReactDOM.render(<><Routes /> <GlobalStyle /></>, document.getElementById('root'));
