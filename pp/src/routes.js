@@ -8,7 +8,7 @@ function Routes() {
 
     return(
     <Router>
-        <Route path='/' component={Home} />
+        <Route exact path='/' component={Home} />
         <Route path='/usuarios' component={Users}/>
     </Router>
     )

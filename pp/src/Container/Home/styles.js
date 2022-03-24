@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import background from '../../assets/background.png'
 
+import { Link } from 'react-router-dom'
+
 export const Container = styled.div `
 
 background: url("${background}");
@@ -11,7 +13,8 @@ flex-direction: column;
 align-items: center;
 gap: 40px;
 
-height: 100vh;
+height: 100%;
+min-height: 100%;
 `
 export const Image = styled.img`
 margin-top: 30px;
@@ -76,7 +79,7 @@ input::-webkit-inner-spin-button {
 
 
 `
-export const Button = styled.button`
+export const Button = styled(Link)`
 width: 342px;
 height: 74px;
 background: rgba(0, 0, 0, 0.8);
@@ -95,6 +98,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 gap: 20px;
+text-decoration: none;
 
 &:hover {
     opacity:0.8 ;

@@ -8,7 +8,7 @@ app.use(cors())
 
 
 
-const users =[]
+let users =[]
 
 const chuckUserId = (request, response, next) => {
 
@@ -65,9 +65,9 @@ app.delete('/users/:id', chuckUserId,  (request, response) => {
 
     const index = request.userIndex
 
-    users.splice(users[index],1)
+    users.splice(index,1)
 
-    return response.status(204).json()
+    return response.status(204).json("User deleted")
 })
 
 

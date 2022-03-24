@@ -25,9 +25,9 @@ const Usuarios = () => {
   async function deleteUser (userId) {
     
     await axios.delete(`http://localhost:3100/users/${userId}`)
-    const newUsers = users.filter((user) => user.id !== userId)//usando filter com user id colocado la no botao trash para poder deletar um usuario
+    const DeleteUsers = users.filter((user) => user.id !== userId)//usando filter com user id colocado la no botao trash para poder deletar um usuario
 
-    setUsers(newUsers)
+    setUsers(DeleteUsers)
   }
 
   return (
@@ -48,7 +48,7 @@ const Usuarios = () => {
           ))}
         </ul>
 
-        <Button><img alt='seta' src={Arrow}/>Voltar</Button>
+        <Button to={'/'}><img alt='seta' src={Arrow}/>Voltar</Button>
 
 
       </ContainerItens>

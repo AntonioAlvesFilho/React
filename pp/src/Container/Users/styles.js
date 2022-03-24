@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import background from '../../assets/bgimage.png'
+import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
 
@@ -44,13 +45,14 @@ margin-bottom: 80px;
 `
 
 
-export const Button = styled.button`
+export const Button = styled(Link)`
 width: 342px;
 height: 74px;
 background: transparent;
 border-radius: 14px;
 border: 1px solid aliceblue;
 margin-top: 132px;
+text-decoration: none;
 
 font-style: normal;
 font-weight: 700;
@@ -90,6 +92,7 @@ margin: 18px 0px;
 border: none;
 outline: none;
 
+
 font-style: normal;
 font-weight: 400;
 font-size: 24px;
@@ -100,6 +103,7 @@ button {
     border: none;
     background: none;
     cursor: pointer;
+    
 
     &:hover{
         opacity: 0.6;

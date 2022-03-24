@@ -18,7 +18,8 @@ const App = () => {
       name: inputName.current.value,
       age: inputAge.current.value,
     });
-console.log(newUser) 
+
+    console.log(newUser)
     setUsers(...users, newUser)
 
   }
@@ -37,8 +38,7 @@ console.log(newUser)
         <InputLabel>Idade</InputLabel>
         <Input type="number" ref={inputAge} placeholder="Ex: 25" />
 
-        <Button onClick={addNewUser}>Cadastrar <img alt='seta' src={Arrow} /></Button>
-
+        <Button to="/usuarios" onClick={addNewUser}>Cadastrar <img alt='seta' src={Arrow} /></Button>
 
       </ContainerItens>
     </Container>
