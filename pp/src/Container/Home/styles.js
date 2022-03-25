@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import background from '../../assets/background.png'
 
-import { Link } from 'react-router-dom'
 
 export const Container = styled.div `
 
@@ -33,18 +32,7 @@ flex-direction: column;
 height: 100vh;
 
 `
-export const H1 = styled.h1`
-font-style: normal;
-font-weight: 700;
-font-size: 34px;
-line-height: 40px;
-text-align: center;
-margin-bottom: 80px;
 
-
-
-
-`
 export const InputLabel = styled.p`
 font-style: normal;
 font-weight: 700;
@@ -79,7 +67,7 @@ input::-webkit-inner-spin-button {
 
 
 `
-export const Button = styled(Link)`
+export const Button = styled.button`
 width: 342px;
 height: 74px;
 background: rgba(0, 0, 0, 0.8);

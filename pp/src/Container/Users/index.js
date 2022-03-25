@@ -3,12 +3,15 @@ import User from '../../assets/users.png'
 import Arrow from '../../assets/arrow.png'
 import Trash from "../../assets/trash.png"
 import axios from 'axios'
-import { Container, Image, ContainerItens, H1, Button, Users } from "./styles";
+import  H1  from "../../components/Title/index";
+import { Container, Image, ContainerItens, Button, Users } from "./styles";
+import { useHistory } from "react-router-dom";
 
 const Usuarios = () => {
-  //const users = []
 
   const [users, setUsers] = useState([]);
+  const History  = useHistory()
+
 
   useEffect(() => {
 
@@ -30,14 +33,19 @@ const Usuarios = () => {
     setUsers(DeleteUsers)
   }
 
+  const goBackPage = () => {
+    History.push("/")
+
+    //History.goBack() ou esse para voltar apenas para a pagina anterior
+  }
+
+
   return (
     <Container>
       <Image alt="logo-img" src={User} />
       <ContainerItens>
 
         <H1>Usuários</H1>
-
-
 
         <ul>
           {users.map((user) => (
@@ -48,7 +56,7 @@ const Usuarios = () => {
           ))}
         </ul>
 
-        <Button to={'/'}><img alt='seta' src={Arrow}/>Voltar</Button>
+        <Button onClick={goBackPage}><img alt='seta' src={Arrow}/>Voltar</Button>
 
 
       </ContainerItens>

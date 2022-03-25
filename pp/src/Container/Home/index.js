@@ -3,7 +3,9 @@ import People from '../../assets/people.png'
 import Arrow from '../../assets/arrow.png'
 
 import axios from 'axios'
-import { Container, Image, ContainerItens, H1, InputLabel, Input, Button } from "./styles";
+import H1 from "../../components/Title/index";
+import { Container, Image, ContainerItens, InputLabel, Input, Button } from "./styles";
+import {useHistory} from "react-router-dom"
 
 const App = () => {
   //const users = []
@@ -11,8 +13,10 @@ const App = () => {
   const [users, setUsers] = useState([]);
   const inputName = useRef()
   const inputAge = useRef()
+  const History = useHistory()
 
   async function addNewUser() {
+
 
     const { data: newUser } = await axios.post("http://localhost:3100/users", {
       name: inputName.current.value,
@@ -21,6 +25,7 @@ const App = () => {
 
     console.log(newUser)
     setUsers(...users, newUser)
+    History.push("/usuarios")
 
   }
 
@@ -38,7 +43,7 @@ const App = () => {
         <InputLabel>Idade</InputLabel>
         <Input type="number" ref={inputAge} placeholder="Ex: 25" />
 
-        <Button to="/usuarios" onClick={addNewUser}>Cadastrar <img alt='seta' src={Arrow} /></Button>
+        <Button onClick={addNewUser}>Cadastrar <img alt='seta' src={Arrow} /></Button>
 
       </ContainerItens>
     </Container>

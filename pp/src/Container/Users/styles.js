@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import background from '../../assets/bgimage.png'
-import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
 
@@ -12,7 +11,8 @@ flex-direction: column;
 align-items: center;
 gap: 40px;
 
-height: 100vh;
+height: 100%;
+min-height: 100%;
 `
 export const Image = styled.img`
 margin-top: 30px;
@@ -30,22 +30,11 @@ display: flex;
 flex-direction: column;
 height: 100vh;
 
-`
-export const H1 = styled.h1`
-font-style: normal;
-font-weight: 700;
-font-size: 34px;
-line-height: 40px;
-text-align: center;
-margin-bottom: 80px;
-
-
-
 
 `
 
 
-export const Button = styled(Link)`
+export const Button = styled.button`
 width: 342px;
 height: 74px;
 background: transparent;
