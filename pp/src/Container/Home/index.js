@@ -4,7 +4,8 @@ import Arrow from '../../assets/arrow.png'
 
 import axios from 'axios'
 import H1 from "../../components/Title/index";
-import { Container, Image, ContainerItens, InputLabel, Input, Button } from "./styles";
+import  ContainerIten  from "../../components/ContainerItens/index";
+import { Container, Image, InputLabel, Input, Button } from "./styles";
 import {useHistory} from "react-router-dom"
 
 const App = () => {
@@ -33,7 +34,7 @@ const App = () => {
   return (
     <Container>
       <Image alt="logo-img" src={People} />
-      <ContainerItens>
+      <ContainerIten>
 
         <H1>Ola!</H1>
 
@@ -45,7 +46,7 @@ const App = () => {
 
         <Button onClick={addNewUser}>Cadastrar <img alt='seta' src={Arrow} /></Button>
 
-      </ContainerItens>
+      </ContainerIten>
     </Container>
   );
 }

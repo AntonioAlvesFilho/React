@@ -4,7 +4,8 @@ import Arrow from '../../assets/arrow.png'
 import Trash from "../../assets/trash.png"
 import axios from 'axios'
 import  H1  from "../../components/Title/index";
-import { Container, Image, ContainerItens, Button, Users } from "./styles";
+import ContainerIten from "../../components/ContainerItens/index";
+import { Container, Image, Button, Users } from "./styles";
 import { useHistory } from "react-router-dom";
 
 const Usuarios = () => {
@@ -43,7 +44,7 @@ const Usuarios = () => {
   return (
     <Container>
       <Image alt="logo-img" src={User} />
-      <ContainerItens>
+      <ContainerIten blur={true}>
 
         <H1>Usuários</H1>
 
@@ -59,7 +60,7 @@ const Usuarios = () => {
         <Button onClick={goBackPage}><img alt='seta' src={Arrow}/>Voltar</Button>
 
 
-      </ContainerItens>
+      </ContainerIten>
     </Container>
   );
 }

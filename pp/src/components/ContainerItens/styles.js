@@ -11,5 +11,9 @@ padding: 50px 36px;
 display: flex;
 flex-direction: column;
 height: 100vh;
+${props => props.blur &&`
 
+backdrop-filter: blur(45px);
+
+`}
 `

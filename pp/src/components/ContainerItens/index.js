@@ -1,9 +1,10 @@
 import React from "react";
-import { ContainerItens as Container } from "./styles";
+import { ContainerItens as ContainerIten} from "./styles";
 
-const ContainerItens = () => {
+const ContainerItens = (props, blur) => {
 
-    return <ContainerItens></ContainerItens>
+    
+    return <ContainerIten blur={blur}>{props.children}</ContainerIten>
 }
 
 export default ContainerItens
